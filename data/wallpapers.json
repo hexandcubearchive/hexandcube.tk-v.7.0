@@ -1,0 +1,22 @@
+{
+    "1": {
+        "name": "Blobs",
+        "filename": "blobs",
+        "resolution": "3840x2160"
+    },
+    "2": {
+        "name": "Blue, Yellow, Red",
+        "filename": "BYR",
+        "resolution": "7680x4320"
+    },
+    "3": {
+        "name": "Minimal one",
+        "filename": "MNML1",
+        "resolution": "5760x3240"
+    },
+    "4": {
+        "name": "Prototype",
+        "filename": "prototype",
+        "resolution": "1920x1080"
+    }
+}

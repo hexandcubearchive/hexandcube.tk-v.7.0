@@ -1,0 +1,160 @@
+---
+title: Contact
+headingPosition: center
+noContent: false
+---
+
+<div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="pr-12">
+        <h3>Online Profiles</h3>
+        <p>Those are the only profiles, that I actively use. Any other accounts using the name Hexandcube, are not
+            actively used by me, or don't belong to me.</p>
+        {{< profiles>}}
+            <br>
+            <span class="text-gray-500 dark:text-gray-400 text-sm"><i class="fas fa-lock fa-xs"></i>&nbsp; - Supports
+                secure messaging (E2EE)</span>
+    </div>
+    <div>
+        <h3>OpenPGP</h3>
+        <p>If you want, you can encrypt the message using my public OpenPGP key. If you require an encrypted reply,
+            please attach your public PGP key to your message.
+            <br>
+            You don't need to use OpenPGP when using an app that supports E2EE.
+        </p>
+
+        <ul class="mt-2">
+            <li><a href="/.well-known/openpgpkey.pgp">Binary Format</a> (3KB)</li>
+            <li><a href="/.well-known/openpgpkey.asc">ASCII-Armored format</a> (4KB)</li>
+            <li><a href="#" onclick="togglePlaintextKey()" id="plaintextKeyBlockToggle">Show plaintext</a></li>
+        </ul>
+        <pre id="plaintextKeyBlock" class="hidden"><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQGNBF/T3+cBDAC/tisfAbG+ar4QXTZfvCOB4NCJaV5RXEjPo8vWjsZgAbRg9IZ9
+7RfmwDxYgaz7mOSU/7GP/aCjxTuPV2bBROBhbp4g8uzYCkW5cdC3hcIHUUQXGdlN
+Bx5xhrJB9Mu2pu15ZDwH6KmV59/XuK4l3F0A8R/Oqfh5/gAXxpbfPCLVoUH8FGiM
+xtjVwRmR2jMTVQ2+NclEhLIqGE1V7DYKw4gneYZ9MwA5VcdfkT164j73yvDSOXg9
+pG51LUkCM2iUpP+qmW20zFQ+3Ri4rsVrcYY26aMsGvgQe0it5ch7p8zEZEHkAF5z
+yunKzyyE8Tri9SHd+R5wHPSx98+dBBQHeUe/oDu9WnChJkApAykkKtFIA26uCXks
+skzK04vAr2bdzBgDWpMs79JppQxWiz70lcBgtFYMoRAEKgJCrVL6hw6v5t4LUkKx
+w2YpN1m3Et6H3uXhg1syqSNiYHaeCyw/5fsZtGYuWl4ubtG1oX0f+lPADjKs/x55
+Fz4oIk2qQmqgMe0AEQEAAbQlSGV4YW5kY3ViZSA8aGV4YW5kY3ViZUBoZXhhbmRj
+dWJlLnRrPokDoQQTAQgCCwIbIwUJA9w2SQULCQgHAgYVCgkICwIEFgIDAQIeAQIX
+gBYhBFaBvdK3DTW+NqolmFw38wKBhYE2BQJf0+a8YBSAAAAAABIARXByb29mQG1l
+dGFjb2RlLmJpemh0dHBzOi8vd3d3LnJlZGRpdC5jb20vdXNlci9oZXhhbmRjdWJl
+L2NvbW1lbnRzL2tiYngwdC9vcGVucGdwX3Byb29mLzsUgAAAAAASACBwcm9vZkBt
+ZXRhY29kZS5iaXpodHRwczovL21zdGRuLnNvY2lhbC9AaGV4YW5kY3ViZV4UgAAA
+AAASAENwcm9vZkBtZXRhY29kZS5iaXpodHRwczovL2dpc3QuZ2l0aHViLmNvbS9o
+ZXhhbmRjdWJlL2NiMDZmZGMyZGY1MTY3MzBlODk4YmZmMzAzMGQ3YTRlNRSAAAAA
+ABIAGnByb29mQG1ldGFjb2RlLmJpemRuczpoZXhhbmRjdWJlLnRrP3R5cGU9VFhU
+RRSAAAAAABIAKnByb29mQG1ldGFjb2RlLmJpemh0dHBzOi8vZ2l0bGFiLmNvbS9o
+ZXhhbmRjdWJlL2dpdGxhYl9wcm9vZlQUgAAAAAASADlwcm9vZkBtZXRhY29kZS5i
+aXpodHRwczovL3R3aXR0ZXIuY29tL2hleGFuZGN1YmUvc3RhdHVzLzEzMzc1MTE0
+OTI0MDk4NDc4MDgACgkQXDfzAoGFgTaghgv8D6NJQeS3a2pDhgCJ5CMa5zN3R/Kp
+7Zf8LKi/m4o4oiIFOJqNJziuuJkE67MI7c18fILDEr1cEgl3hWhQu5EG6mzTs7zH
+SSTpGGJZAZ2N/ROKjo8ceHhe++rRHKWzK2fV+W0V/XwV1FFzFb2tVC5s7uzS3Hav
+lmFyb94OW3TZ66Dixp7d4e03BAkTRR61YuYpgqTtVyYMeTPSwhL9E+ePGNZQ52fK
+ZrTY+5ZESDrGQ7/1Rxft2hxFInoXJJ2GPskEdAxZYj7RMPDxOZv/XFgfyGsdufCH
+eugWqy8ONpP/MjD8Qu/VVQH/T3p+VmGI673nfoOD87OJ0CnHTD+G24aorCMBqJI5
+DMtvkqltGlEfYizjgRl8AAfIdYN+gTAyEYS7H2942NmsFNMyf9TZSHy68D3TMl6j
+ego5k8RZDd30+FBYwwqNAQEqO00+JkVArkMR11Lp/3bppyDVLNyxTNY+tlC7593X
+/sA0v4GMbuR4vs0dNJ6LOYSYcOm5JL8sWI2ruQGNBF/T3+cBDADQrpuFBrRzPEC6
+TCcj83JZ6AmuSPyh6QUdL8DqblI3pUZw0410GdhLpRoT+z6/2W0+AlweEkE3aAsk
+8Ns2UENOPaU8ZtLpKO6rMwWlOjRI/phIDRkj4DQ4C5eg2EXaWcwY8YU3W7WMg4FM
+ERjxNX200HmXqn2ZG9ecgbkJ/rKuPbKSRQLTsHpRCLjKU4Jgi2rWj8VgOm/kgFzd
+jRj4a78Tp5Ve+hfl79Z8sy+r8try0+5SH7SOy4ZhEJ+Or9p5W7uHhtp+1coE3dWE
+6noISMowFKYQDg8SIAGHe4Yf5GdReyu3KWCycxkBL0McnN11H9dZ9Bkw7OiToEsm
+tko4pfNORv+2LdhfEnxbeSUe24devDiHyO9CLA9Pugntm5i2Drvb71r2dkEDXB9u
+7oRLNC4ykw2+VDmFKVdGYgmd9ifbre0EFOS3rj6iL0g8+ol3n4gX/r2y8Lo9HQ2P
+3SelqDetUH01b8DRsBwM8RI0qPVnv5R7mguRcGfCWBGeYuKYrqcAEQEAAYkBvAQY
+AQgAJhYhBFaBvdK3DTW+NqolmFw38wKBhYE2BQJf09/nAhsMBQkD3DZJAAoJEFw3
+8wKBhYE2+z8L/jljnGs22i8TBqfqxdoTERS4phh/O1fvZL9mBPTjT/IsmxMos1nV
+VpyxdlBFb73HlTmteJ8/zUg07ipxrllz68/6R+JVgd6RgobzTa/xkarWojc6Ps0s
+CYvJS7cpjrvNvG6QNbyCOvKjInZLSzKhwRMHIZMUrvKUj4+nkbA9701t0PUyRVZq
+gz2cY5v8xvOfVJG3XZUF3PjMk+WDLnJUadJ5c2B3/sgyXvMRPUz4kyz1pfXRgkJc
++mLT731TfIeN70MrPAguZ9VJv7BTMK9Jk2AgHg4zQMskWRoqGEkDxVW4tH6nl8ec
+4icen9T3z2Ds+YZXeLVVXh4DX++rHLoETIKa3AG5agaKnPnDRXilHl6GrHa50afi
+npcJLGpOtNbmUNq71STKVUHFOxmuUi+60cCvZiXwHbrQEODppt97o8hSt891ZE1T
+1tuDy885pBZnFAz8O3eVkpo8hrknHrtTNg/DJgyA97f7MhxlBpIuxj7sStZkBYmN
+qe6EyC7qxUxBDQ==
+=i/gj
+-----END PGP PUBLIC KEY BLOCK-----</code></pre>
+        <img src="/media/openpgpkey-qr.png" class="rounded mt-2 mb-2">
+        <a href="https://keyoxide.org/5681BDD2B70D35BE36AA25985C37F30281858136"
+            class="text-indigo-500 inline-flex items-center font-bold">View my Keyoxide profile
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+            </svg>
+        </a>
+        <br>
+        <a href="https://keyoxide.org/verify/hkp/5681BDD2B70D35BE36AA25985C37F30281858136"
+            class="text-indigo-500 inline-flex items-center font-bold">Verify a signature using Keyoxide
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+            </svg>
+        </a>
+        <br>
+        <a href="https://keyoxide.org/encrypt/hkp/5681BDD2B70D35BE36AA25985C37F30281858136"
+            class="text-indigo-500 inline-flex items-center font-bold">Encrypt a message using Keyoxide
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+            </svg>
+        </a>
+    </div>
+</div>
+
+<div class="pt-24">
+    <div class="flex flex-col text-center w-full">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Contact Form</h1>
+    </div>
+    <form class="2xl:w-4/5 lg:w-2/3 md:w-2/3 mx-auto" name="Contact" method="POST" data-netlify="true">
+        <div class="flex flex-wrap -m-2">
+            <div class="p-2 w-1/2">
+                <div class="relative">
+                    <label for="name" class="leading-7 text-sm text-gray-600 dark:text-gray-300">Name</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full bg-gray-100 dark:bg-gray-800 rounded border border-gray-300 dark:border-gray-700 focus:border-indigo-500 dark:focus:border-indigo-500 text-base outline-none text-gray-700 dark:text-gray-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+            </div>
+            <div class="p-2 w-1/2">
+                <div class="relative">
+                    <label for="email" class="leading-7 text-sm text-gray-600 dark:text-gray-300">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full bg-gray-100 dark:bg-gray-800 rounded border border-gray-300 dark:border-gray-700 focus:border-indigo-500 dark:focus:border-indigo-500 text-base outline-none text-gray-700 dark:text-gray-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+            </div>
+            <div class="p-2 w-full">
+                <div class="relative">
+                    <label for="message" class="leading-7 text-sm text-gray-600 dark:text-gray-300">Message</label>
+                    <textarea id="message" name="message"
+                        class="w-full bg-gray-100 dark:bg-gray-800 rounded border border-gray-300 dark:border-gray-700 focus:border-indigo-500 dark:focus:border-indigo-500 text-base outline-none text-gray-700 dark:text-gray-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out h-48 resize-none "></textarea>
+                </div>
+            </div>
+            <div class="p-2 w-full">
+                <button href="{{ .url }}"
+                    class="button bg-indigo-200 hover:bg-indigo-300 dark:hover:bg-indigo-600 dark:bg-indigo-400 dark:text-indigo-900 text-indigo-800 my-2 py-2 px-5 text-md">Send</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    window.onload = (event) => {
+        var plaintextKeyBlock = getElementById('plaintextKeyBlock');
+        var plaintextKeyBlockToggle = getElementById('plaintextKeyBlockToggle');
+    };
+    function togglePlaintextKey() {
+        if (plaintextKeyBlock.classList.contains('hidden')) {
+            plaintextKeyBlock.classList.remove('hidden');
+            plaintextKeyBlockToggle.innerHTML = 'Hide plaintext'
+        } else {
+            plaintextKeyBlock.classList.add('hidden');
+            plaintextKeyBlockToggle.innerHTML = 'Show plaintext'
+        }
+    }
+</script>

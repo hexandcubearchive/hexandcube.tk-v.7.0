@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /pages
+Disallow: /404
+Disallow: /assets
+Disallow: /cookiepolicy
+Disallow: /cookies
+Disallow: /media

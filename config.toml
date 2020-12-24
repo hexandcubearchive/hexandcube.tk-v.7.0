@@ -1,0 +1,150 @@
+# Hexandcube.tk Version 7.0 (codename hextails)
+baseURL = "https://hexandcube.tk/"
+languageCode = "en-us"
+theme = "hextails"
+title = "Hexandcube"
+paginate = 5
+enableGitInfo = false
+enableEmoji = true
+enableInlineShortcodes = true
+watch = true
+enableRobotsTXT = true
+summaryLength = 70
+
+[permalinks]
+    posts = "/posts/:year/:month/:day/:title/"
+
+[params]
+
+    margins = "2xl:mx-72 xl:mx-28 lg:mx-10 md:mx-4" # Uses TailwindCSS Utility Classes
+
+    [params.meta]
+        name = "hexandcube.tk"
+        description = "Hello, I'm Hexandcube. Hobbyist translator, and open source enthusiast from Poland. I also sometimes build websites for people."
+        openGraph = true
+        ogType = "profile"
+        ogURL = "https://hexandcube.tk"
+        ogImageEndpoint = "https://opengraph.hexandcube.tk/"
+        ogImageMarkdown = true
+        twitterCards = true
+        twitterCardType = "summary"
+        twitterSiteHandle = "@hexandcube"
+        twitterCreatorHandle = "@hexandcube"
+
+    [params.menus]
+        [params.menus.footerLinks1]
+            enable = true
+            title = "Useful Links"
+        
+        [params.menus.footerLinks2]
+            enable = true
+            title = "Legal Stuff"
+            
+[menu]
+
+    [[menu.header]]
+        identifier = "Home"
+        name = "Home"
+        url = "/"
+        weight = 1
+
+    [[menu.header]]
+        identifier = "Blog"
+        name = "Posts"
+        url = "/blog/"
+        weight = 2
+
+    [[menu.header]]
+        identifier = "Contact"
+        name = "Contact"
+        url = "/contact/"
+        weight = 3
+    
+    [[menu.header]]
+        identifier = "Download"
+        name = "Downloads"
+        url = "/download/"
+        weight = 4
+
+    [[menu.footerLinks1]]
+        identifier = "Download"
+        name = "Download"
+        url = "/download/"
+        weight = 1
+
+    [[menu.footerLinks1]]
+        identifier = "Contact"
+        name = "Contact"
+        url = "/contact/"
+        weight = 2
+
+    [[menu.footerLinks1]]
+        identifier = "Posts"
+        name = "Posts"
+        url = "/blog/"
+        weight = 3
+
+    [[menu.footerLinks2]]
+        identifier = "Privacy"
+        name = "Privacy Policy"
+        url = "/privacy/"
+        weight = 1
+
+    [[menu.footerLinks2]]
+        identifier = "Terms"
+        name = "Terms and Conditions"
+        url = "/terms/"
+        weight = 2
+
+    [[menu.footerLinks2]]
+        identifier = "Open Source"
+        name = "Open Source"
+        url = "/opensource/"
+        weight = 3
+
+[markup]
+    defaultMarkdownHandler = "goldmark"
+    [markup.asciidocExt]
+        backend = "html5"
+        extensions = []
+        failureLevel = "fatal"
+        noHeaderOrFooter = true
+        preserveTOC = false
+        safeMode = "unsafe"
+        sectionNumbers = false
+        trace = false
+        verbose = false
+        workingFolderCurrent = false
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+        definitionList = true
+        footnote = true
+        linkify = true
+        strikethrough = true
+        table = true
+        taskList = true
+        typographer = true
+        [markup.goldmark.parser]
+        attribute = true
+        autoHeadingID = true
+        autoHeadingIDType = "github"
+        [markup.goldmark.renderer]
+        hardWraps = false
+        unsafe = false
+        xhtml = false
+    [markup.highlight]
+        anchorLineNos = false
+        codeFences = true
+        guessSyntax = true
+        hl_Lines = ""
+        lineAnchors = ""
+        lineNoStart = 1
+        lineNos = false
+        lineNumbersInTable = true
+        noClasses = true
+        style = "monokai"
+        tabWidth = 4
+    [markup.tableOfContents]
+        endLevel = 3
+        ordered = false
+        startLevel = 2

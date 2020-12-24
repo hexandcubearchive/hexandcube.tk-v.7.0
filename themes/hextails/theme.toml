@@ -1,0 +1,12 @@
+name = "Hexandcube Hextails"
+license = "MIT"
+licenselink = "https://github.com/hexandcube/hexandcube.tk/blob/master/LICENSE"
+description = ""
+homepage = "https://hexandcube.tk/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Hexandcube"
+  homepage = "https://hexandcube.tk"

@@ -1,0 +1,7 @@
+<div class="bg-{{ .Get "color"}}-200 dark:bg-{{ .Get "color"}}-400 px-6 py-4 my-4 rounded-md text-lg flex mx-auto w-full {{ .Get "class" }}">
+    {{ $currentPage := . }}
+    {{ with .Get "icon" }}
+    <i class="mr-3 mt-1 text-{{ $currentPage.Get "color"}}-800 dark:text-{{ $currentPage.Get "color"}}-900 {{ . }}"></i>
+    {{ end }}
+    <span class="text-{{ .Get "color"}}-800 dark:text-{{ .Get "color"}}-900 font-bold">{{ .Inner }}</span>
+</div>

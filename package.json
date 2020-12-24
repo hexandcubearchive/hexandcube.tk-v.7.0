@@ -1,0 +1,25 @@
+{
+  "name": "hexandcube.tk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.0.2",
+    "netlify-cli": "^2.69.11",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.1.14",
+    "postcss-cli": "^8.2.0",
+    "postcss-import": "^13.0.0",
+    "tailwindcss": "2.0.1"
+  },
+  "devDependencies": {
+    "stylelint-config-standard": "^20.0.0",
+    "tailwindcss-debug-screens": "^1.1.0"
+  }
+}

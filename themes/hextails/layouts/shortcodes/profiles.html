@@ -1,0 +1,17 @@
+<table class="w-full">
+    <tbody>
+        {{ range .Site.Data.profiles}}
+        <tr>
+            <td class="text-gray-600 dark:text-gray-300 font-medium">
+                {{ .name }}
+                <span>
+                    {{ if .secure }}
+                    <i class="fas fa-lock fa-xs text-gray-500 dark:text-gray-400"></i>
+                    {{ end }}
+                </span>
+            </td>
+            <td><a href="{{ .url }}" rel="me" class="font-mono">{{ .username }}</a></td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>

@@ -1,0 +1,186 @@
+@layer components {
+
+    .button-old {
+        @apply inline-flex font-bold transition-all duration-300 text-lg items-center justify-center px-3 py-2 border border-transparent rounded-md text-white bg-indigo-600 hover:bg-indigo-700;
+        font-family: "Inter", sans-serif;
+    }
+
+    .button {
+        @apply inline-flex font-bold transition-all shadow duration-300 text-base items-center justify-center px-3 py-2 border border-transparent rounded-md text-white bg-indigo-600 hover:bg-indigo-700;
+        font-family: "Inter", sans-serif;
+    }
+
+    .button:hover {
+        @apply bg-blue-500 shadow-none;
+    }
+
+    .nav-item {
+        @apply py-3 px-0 block text-gray-500 dark:text-gray-400 transition-all duration-300;
+        font-family: "Inter",
+            sans-serif;
+        font-weight: 700;
+    }
+
+    .nav-item:hover {
+        @apply text-gray-900 dark:text-gray-50;
+        font-weight: 700;
+    }
+
+    @screen lg {
+        .nav-item {
+            @apply p-4;
+        }
+    }
+
+    .socialicon {
+        @apply text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 transition-all-300 font-normal items-center justify-center outline-none focus:outline-none mr-2;
+    }
+}
+
+@layer utilities {
+    .transition-all-300 {
+        @apply transition-all duration-300;
+    }
+    .spoiler {
+        filter: blur(3px);
+        user-select: none;
+        transition: all 0.3s;
+    }
+
+    .spoiler:hover,
+    .spoiler:active {
+        filter: none;
+    }
+}
+
+@font-face {
+    font-family: 'Hexandcube Icons';
+    src: url('../fonts/Hexandcube-Icons.eot');
+    src: url('../fonts/Hexandcube-Icons.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Hexandcube-Icons.woff') format('woff'),
+        url('../fonts/Hexandcube-Icons.ttf') format('truetype'),
+        url('../fonts/Hexandcube-Icons.svg#Hexandcube-Icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*='icon-']:before {
+    display: inline-block;
+    font-family: 'Hexandcube Icons', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+}
+
+p, .text {
+    @apply text-gray-600 dark:text-gray-300 font-medium leading-7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+    @apply text-gray-800 dark:text-gray-50;
+}
+
+.icon-hexandcube:before {
+    content: '\0041';
+}
+
+::selection {
+    @apply shadow-md text-black bg-yellow-300;
+    text-shadow: none;
+}
+
+#menu-toggle:checked+#menu {
+    display: block;
+}
+
+.content p {
+    @apply my-4;
+}
+
+.content h1 {
+    @apply text-6xl font-bold mt-6 mb-3;
+}
+
+.content h2 {
+    @apply text-5xl font-bold mt-6 mb-3;
+}
+
+.content h3 {
+    @apply text-4xl font-bold mt-6 mb-3;
+}
+
+.content h4 {
+    @apply text-3xl font-bold mt-6 mb-3;
+}
+
+.content h5 {
+    @apply text-2xl my-2;
+}
+
+.content h6 {
+    @apply text-xl my-2;
+}
+
+.content a:not(.button) {
+    @apply text-blue-600;
+}
+
+.content a:hover:not(.button) {
+    @apply text-blue-500 underline;
+    transition: all 0.3;
+}
+
+.content blockquote {
+    @apply border-l-8 border-gray-600 px-3 py-2 my-2 inline-block ml-1 rounded bg-gray-100 dark:bg-gray-800;
+}
+
+.content blockquote p {
+    @apply text-gray-900  dark:text-gray-100;
+}
+
+.content ul {
+    @apply pl-4 text;
+    list-style-type: disc;
+}
+
+.content ol {
+    list-style-type: decimal;
+    @apply pl-8 text;
+}
+
+.content li {
+    @apply text-gray-600 dark:text-gray-300;
+}
+
+.content hr {
+    @apply my-3;
+}
+
+.content code {
+    @apply font-mono text-gray-900 bg-gray-100 dark:bg-gray-800 dark:text-gray-100 py-1 px-2 rounded;
+}
+
+.content pre {
+    @apply font-mono text-gray-900 bg-gray-100 dark:bg-gray-800 dark:text-gray-100 rounded ml-1 my-2 p-3;
+}
+
+.content pre code {
+    @apply bg-none;
+}
+
+.content table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+.content thead {
+    @apply border-2;
+}

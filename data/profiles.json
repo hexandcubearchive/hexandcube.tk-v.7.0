@@ -1,0 +1,80 @@
+{
+    "1": {
+        "name": "Email",
+        "username": "hexandcube@hexandcube.tk",
+        "secure": false,
+        "url": "mailto:hexandcube@hexandcube.tk"
+    },
+    "2": {
+        "name": "Twitter",
+        "username": "@hexandcube",
+        "secure": false,
+        "url": "https://twitter.com/hexandcube"
+    },
+    "3": {
+        "name": "Mastodon",
+        "username": "@hexandcube@mstdn.social",
+        "secure": false,
+        "url": "https://mstdn.social/@hexandcube"
+    },
+    "4": {
+        "name": "Telegram",
+        "username": "@hexandcube",
+        "secure": false,
+        "url": "https://t.me/@hexandcube"
+    },
+    "5": {
+        "name": "Reddit",
+        "username": "u/hexandcube",
+        "secure": false,
+        "url": "https://reddit.com/u/hexandcube"
+    },
+    "6": {
+        "name": "GitHub",
+        "username": "@hexandcube",
+        "secure": false,
+        "url": "https://github.com/hexandcube"
+    },
+    "7": {
+        "name": "GitLab",
+        "username": "@hexandcube",
+        "secure": false,
+        "url": "https://gitlab.com/hexandcube"
+    },
+    "8": {
+        "name": "Discord",
+        "username": "Hexandcube#1296",
+        "secure": false,
+        "url": "https://support.discord.com/hc/en-us/articles/218344397-How-do-I-add-my-friend-to-my-friends-list"
+    },
+    "9": {
+        "name": "Matrix",
+        "username": "@hexandcube:marix.org",
+        "secure": true,
+        "url": "https://matrix.to/#/@hexandcube:matrix.org"
+    },
+    "10": {
+        "name": "Signal",
+        "username": "Ask me on any other platform",
+        "secure": true,
+        "url": "#"
+    },
+    "11": {
+        "name": "YouTube",
+        "username": "Hexandcube",
+        "secure": false,
+        "url": "https://youtube.com/hexandcube"
+    },
+    "12": {
+        "name": "Unsplash",
+        "username": "@hexandcube",
+        "secure": false,
+        "url": "https://unsplash.com/hexandcube"
+    },
+    "13": {
+        "name": "Instagram",
+        "username": "@hexandcube",
+        "secure": false,
+        "url": "https://instagram.com/hexandcube"
+    }
+}

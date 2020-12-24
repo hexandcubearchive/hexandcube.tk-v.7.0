@@ -1,0 +1,67 @@
+{{ define "main" }}
+
+<section>
+    <div class="px-6 my-12 {{ .Site.Params.Margins }}">
+        {{ $currentPage := . }}
+        {{if .Params.hidetitle}}
+        {{else}}
+        {{ with .Title}}
+        <h1 class="2xl:text-6xl xl:text-5xl text-4xl font-bold {{ with $currentPage.Params.HeadingPosition }}text-{{ . }}{{ end }}">{{ . }}</h1>
+        {{ end }}
+        <div class="font-mono text divide-x-2 divide-gray-300 dark:divide-gray-500 divide-dotted pt-3">
+            {{ with .Params.Author }}
+            <span class="font-mono text mt-2 inline-block pr-0 pl-1">
+                Author: {{ . }}
+            </span>
+            {{ end }}
+            {{ if .Date}}
+            <span class="font-mono text mt-2 inline-block pr-0 pl-2">
+                Published: {{ .Date.Format "2006-01-02" }}
+            </span>
+            {{ end }}
+            {{ with .Params.updated }}
+            <span class="pr-0 pl-2">
+                Last update: {{ . }}
+            </span>
+            {{ end }}
+            {{ if .Params.tags }}
+            <span class="pr-0 pl-2">
+                {{ range .Params.tags }}
+                #<a class="hover:text-gray-900 dark:hover:text-gray-100" href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
+                    {{- . -}}
+                </a>&nbsp;
+                {{ end }}
+            </span>
+            {{ end }}
+            <br>
+            {{ end }}
+            <br>
+        </div>
+        <noscript>
+            <div class="bg-amber-200 dark:bg-amber-400 px-6 py-4 my-4 rounded-md text-lg flex mx-auto w-full ">
+            <span class="text-amber-800 dark:text-amber-900 font-bold">
+                <svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Your browser does not support JavaScript or scripts are being blocked. <br>
+                <p class="text-md text-gray-900 dark:text-gray-900">
+                    Some of the features on my website may not work properly (e.g. navigation bar on mobile devices, or the
+                    theme switcher). Consider switching to a modern browser that supports JavaScript,
+                    or disable your script blocking software.
+                </p>
+            </span>
+        </div>
+        <br>
+        </noscript>
+        {{ with .Params.thumbnail }}
+        <img src="{{ . }}" alt="Thumbnail" class="rounded-md -mt-5">
+        {{ end }}
+        {{ with .Params.thumbnailCredit }}
+        <span class="content text-gray-500 text-sm mt-1">{{ . | markdownify }}</span>
+        {{ end }}
+        <main class="{{ if .Params.nocontent }}{{ else }}content{{ end }}">{{ .Content }}</main>
+        <br><br>
+        {{ if .Params.Comments }}
+        {{ partial "comments" }}
+        {{ end }}
+    </div>
+</section>
+{{ end }}
