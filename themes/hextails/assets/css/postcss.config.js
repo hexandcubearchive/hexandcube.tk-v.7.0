@@ -20,14 +20,14 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
         const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || []
 
         return broadMatches.concat(innerMatches)
-    }
+    },
 })
 
-module.exports = {    
-    plugins: [        
+module.exports = {
+    plugins: [
         require('postcss-import')({
             path: [themeDir]
-            }), 
+        }),
         require('tailwindcss')(themeDir + 'assets/css/tailwind.config.js'),
         require('autoprefixer')({
             path: [themeDir]
