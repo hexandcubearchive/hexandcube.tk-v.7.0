@@ -7,44 +7,12 @@
             <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
         </svg>
     </div> -->
-    <div class="container">
+    <div class="">
         <div class="flex flex-wrap">
-            <div class="w-full lg:w-6/12">
-                <h4 class="text-3xl font-bold">Hexandcube</h4>
-                <h5 class="text-lg mt-0 mb-2 text-gray-700">
-                    <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
-                    <script>
-                        var statuspage = new StatusPage.page({
-                            page: 'wdf91pvxlsbj'
-                        });
-                        statuspage.summary({
-                            success: function (data) {
-                                var statusEmbed = document.querySelector("#system-status");
-                                var statusDot = document.querySelector("#status-dot");
-                                var serviceStatus = data.status.indicator;
-                                if ("none" == serviceStatus) {
-                                    statusEmbed.innerText = "All systems operational";
-                                    statusEmbed.classList.add("text-teal-500");
-                                    statusDot.classList.add("bg-teal-500");
-                                } else if ("minor" == serviceStatus) {
-                                    statusEmbed.innerText = "Minor Outage";
-                                    statusEmbed.classList.add("text-yellow-500");
-                                    statusDot.classList.add("bg-yellow-500");
-                                } else if ("major" == serviceStatus) {
-                                    statusEmbed.innerText = "Major Outage";
-                                    statusEmbed.classList.add("text-red-500");
-                                    statusDot.classList.add("bg-red-500");
-                                } else if ("maintenance" == serviceStatus) {
-                                    statusEmbed.innerText = "Service Maintenance";
-                                    statusEmbed.classList.add("text-blue-500");
-                                    statusDot.classList.add("bg-blue-500");
-                                } else {
-                                    statusEmbed.innerText = "Unknown";
-                                }
-                            }
-                        });
-                    </script>
-                    <a href="https://status.hexandcube.tk" target="_blank">
+            <div class="w-full lg:w-6/12 text-center lg:text-left">
+                <h4 class="text-4xl font-bold">Hexandcube</h4>
+                <h5 class="lg:text-lg text-xl mt-2 mb-6 lg:mb-2 text-gray-700">
+                    <a href="https://status.hexandcube.tk">
                         <div id="status-div">
                             <span class="status-label text-gray-500"></span> <span id="status-dot"
                                 class="bg-gray-500 w-1 p-1.5 inline-block rounded-full mt-1 ml-0.5 animate-pulse"></span>
@@ -52,47 +20,47 @@
                         </div>
                     </a>
                 </h5>
-                <div class="mt-2">
-                    <a href="https://twitter.com/hexandcube" class="socialicon" name="Twitter" type="button">
-                        <i class="flex fab fa-twitter fa-fw text-xl"></i></a>
-                    <a href="https://github.com/hexandcube" class="socialicon" name="GitHub" type="button">
-                        <i class="flex fab fa-github fa-fw text-xl"></i></a>
-                    <a href="https://gitlab.com/hexandcube" class="socialicon" name="GitLab" type="button">
-                        <i class="flex fab fa-gitlab fa-fw text-xl"></i></a>
-                    <a href="https://instagram.com/hexandcube" class="socialicon" name="Instagram" type="button">
-                        <i class="flex fab fa-instagram fa-fw text-xl"></i></a>
-                    <a href="https://mstdn.social/@hexandcube" class="socialicon" name="Fediverse (Mastodon)"
+                <div class="lg:mt-2 mt-4">
+                    <a href="https://twitter.com/hexandcube" class="socialicon" aria-label="Twitter" type="button">
+                        <i class="flex fab fa-twitter fa-fw lg:text-xl text-3xl"></i></a>
+                    <a href="https://github.com/hexandcube" class="socialicon" aria-label="GitHub" type="button">
+                        <i class="flex fab fa-github fa-fw lg:text-xl text-3xl"></i></a>
+                    <a href="https://gitlab.com/hexandcube" class="socialicon" aria-label="GitLab" type="button">
+                        <i class="flex fab fa-gitlab fa-fw lg:text-xl text-3xl"></i></a>
+                    <a href="https://instagram.com/hexandcube" class="socialicon" aria-label="Instagram" type="button">
+                        <i class="flex fab fa-instagram fa-fw lg:text-xl text-3xl"></i></a>
+                    <a href="https://mstdn.social/@hexandcube" class="socialicon" aria-label="Fediverse (Mastodon)"
                         type="button">
-                        <i class="flex fab fa-mastodon fa-fw text-xl"></i></a>
+                        <i class="flex fab fa-mastodon fa-fw lg:text-xl text-3xl"></i></a>
                     <a href="https://keyoxide.org/5681BDD2B70D35BE36AA25985C37F30281858136" class="socialicon"
-                        name="Keyoxide" type="button">
-                        <i class="flex fas fa-key fa-fw text-xl"></i></a>
+                        aria-label="Keyoxide" type="button">
+                        <i class="flex fas fa-key fa-fw lg:text-xl text-3xl"></i></a>
                 </div>
             </div>
             <div class="w-full lg:w-6/12 mt-6 lg:mt-0">
                 <div class="flex flex-wrap items-top">
-                    <div class="w-full lg:w-6/12 lg:px-4">
+                    <div class="w-full lg:w-6/12 lg:px-4 lg:text-left text-center">
                         {{ if .Site.Params.Menus.FooterLinks1.enable }}
-                        <span class="block uppercase text-gray-600 dark:text-gray-500 text-sm font-semibold mb-2">{{ with .Site.Params.Menus.FooterLinks1.title }}{{ . }}{{ end }}</span>
+                        <span class="block uppercase text-gray-600 dark:text-gray-500 md:text-lg lg:text-sm text-2xl font-semibold mb-2">{{ with .Site.Params.Menus.FooterLinks1.title }}{{ . }}{{ end }}</span>
                         <ul class="list-unstyled">
                             {{ $currentPage := . }}
                             {{ range .Site.Menus.footerlinks1 }}
                             <li>
-                                <a class="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 transition-all-300 font-semibold block text-sm"
+                                <a class="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 transition-all-300 font-semibold block lg:text-sm text-2xl mb-2 lg:mb-0"
                                     href="{{ .URL }}">{{ .Name }}</a>
                             </li>
                             {{ end }}
                         </ul>
                         {{ end }}
                     </div>
-                    <div class="w-full lg:w-6/12 lg:px-4 mt-4 lg:mt-0">
+                    <div class="w-full lg:w-6/12 lg:px-4 mt-4 lg:mt-0 lg:text-left text-center">
                         {{ if .Site.Params.Menus.FooterLinks2.enable }}
-                        <span class="block uppercase text-gray-600 dark:text-gray-500 text-sm font-semibold mb-2">{{ with .Site.Params.Menus.FooterLinks2.title }}{{ . }}{{ end }}</span>
+                        <span class="block uppercase text-gray-600 dark:text-gray-500 md:text-lg lg:text-sm text-2xl font-semibold mb-2">{{ with .Site.Params.Menus.FooterLinks2.title }}{{ . }}{{ end }}</span>
                         <ul class="list-unstyled">
                             {{ $currentPage := . }}
                             {{ range .Site.Menus.footerlinks2 }}
                             <li>
-                                <a class="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 transition-all-300 font-semibold block text-sm"
+                                <a class="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 lg:text-sm text-2xl transition-all-300 font-semibold block"
                                     href="{{ .URL }}">{{ .Name }}</a>
                             </li>
                             {{ end }}
@@ -107,34 +75,9 @@
         <div class="flex flex-wrap items-center md:justify-between justify-center">
             <div class="w-full px-4 mx-auto text-center">
                 <div class="text-sm text-gray-700 dark:text-gray-400 font-semibold py-1">
-                    Copyright &copy; 2017 - 2021 Hexandcube | Version 7.0
+                    Copyright &copy; 2017 - 2021 Hexandcube
                 </div>
             </div>
         </div>
     </div>
 </footer>
-
-<div class="hidden"></div>
-
-<script>
-        PurgeCSSWhitelist: [
-        "bg-gray-200", "hover:bg-gray-300", "dark:hover:bg-gray-600", "dark:bg-gray-400", "dark:text-gray-900", "text-gray-800",
-        "bg-red-200", "hover:bg-red-300", "dark:hover:bg-red-600", "dark:bg-red-400", "dark:text-red-900", "text-red-800",
-        "bg-orange-200", "hover:bg-orange-300", "dark:hover:bg-orange-600", "dark:bg-orange-400", "dark:text-orange-900", "text-orange-800",
-        "bg-amber-200", "hover:bg-amber-300", "dark:hover:bg-amber-600", "dark:bg-amber-400", "dark:text-amber-900", "text-amber-800",
-        "bg-yellow-200", "hover:bg-yellow-300", "dark:hover:bg-yellow-600", "dark:bg-yellow-400", "dark:text-yellow-900", "text-yellow-800",
-        "bg-lime-200", "hover:bg-lime-300", "dark:hover:bg-lime-600", "dark:bg-lime-400", "dark:text-lime-900", "text-lime-800",
-        "bg-green-200", "hover:bg-green-300", "dark:hover:bg-green-600", "dark:bg-green-400", "dark:text-green-900", "text-green-800",
-        "bg-emerald-200", "hover:bg-emerald-300", "dark:hover:bg-emerald-600", "dark:bg-emerald-400", "dark:text-emerald-900", "text-emerald-800",
-        "bg-teal-200", "hover:bg-teal-300", "dark:hover:bg-teal-600", "dark:bg-teal-400", "dark:text-teal-900", "text-teal-800",
-        "bg-cyan-200", "hover:bg-cyan-300", "dark:hover:bg-cyan-600", "dark:bg-cyan-400", "dark:text-cyan-900", "text-cyan-800",
-        "bg-lightBlue-200", "hover:bg-lightBlue-300", "dark:hover:bg-lightBlue-600", "dark:bg-lightBlue-400", "dark:text-lightBlue-900", "text-lightBlue-800",
-        "bg-blue-200", "hover:bg-blue-300", "dark:hover:bg-blue-600", "dark:bg-blue-400", "dark:text-blue-900", "text-blue-800",
-        "bg-indigo-200", "hover:bg-indigo-300", "dark:hover:bg-indigo-600", "dark:bg-indigo-400", "dark:text-indigo-900", "text-indigo-800",
-        "bg-violet-200", "hover:bg-violet-300", "dark:hover:bg-violet-600", "dark:bg-violet-400", "dark:text-violet-900", "text-violet-800",
-        "bg-purple-200", "hover:bg-purple-300", "dark:hover:bg-purple-600", "dark:bg-purple-400", "dark:text-purple-900", "text-purple-800",
-        "bg-fuchia-200", "hover:bg-fuchia-300", "dark:hover:bg-fuchia-600", "dark:bg-fuchia-400", "dark:text-fuchia-900", "text-fuchia-800",
-        "bg-pink-200", "hover:bg-pink-300", "dark:hover:bg-pink-600", "dark:bg-pink-400", "dark:text-pink-900", "text-pink-800",
-        "bg-rose-200", "hover:bg-rose-300", "dark:hover:bg-rose-600", "dark:bg-rose-400", "dark:text-rose-900", "text-rose-800"
-    ]
-</script>

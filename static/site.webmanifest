@@ -1,0 +1,47 @@
+{
+    "name": "Hexandcube.tk",
+    "short_name": "Hexandcube",
+    "lang": "en-US",
+    "start_url": "/",
+    "display": "minimal-ui",
+    "orientation": "portrait",
+    "theme_color": "#ec5e45",
+    "icons": [{
+            "src": "/assets/img/icons/android-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/img/icons/android-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/img/icons/maskable.png",
+            "sizes": "4800x4800",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [{
+            "name": "Posts",
+            "short_name": "Posts",
+            "description": "Latest blog posts",
+            "url": "/posts",
+            "icons": [{
+                "src": "/assets/img/icons/android-192x192.png",
+                "sizes": "192x192"
+            }]
+        },
+        {
+            "name": "Downloads",
+            "short_name": "Downloads",
+            "description": "The download center",
+            "url": "/download",
+            "icons": [{
+                "src": "/assets/img/icons/android-192x192.png",
+                "sizes": "192x192"
+            }]
+        }
+    ]
+}
