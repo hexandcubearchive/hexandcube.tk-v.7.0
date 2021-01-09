@@ -1,0 +1,54 @@
+---
+title: Raport szczepień w Polsce
+alias: ["/szczepienia"]
+---
+<div class="font-mono -mt-16">
+    <p>
+        Ostatnia Aktualizacja: <span id="lastUpdate">...</span>
+        <br>
+        Link do strony: <a href="#">https://hexandcube.tk/szczepienia</a>
+        <br>
+        Źródło danych: Zbiór <a href="http://bit.ly/covid19-poland">COVID-19 w Polsce</a> tworzony przez <a href="https://twitter.com/micalrg">Michała Rogalskiego</a>
+    </p>
+</div>
+
+<h3>Statystyki</h3>
+<p>
+    Liczba zaszczepionych ostatniej doby (<span id="lastUpdateDate">...</span>): <span id="vaccinatedLast24h">...</span>
+    <br>
+    Liczba osób które otrzymały pierwszą dawkę: <span id="gotFirstDose">...</span> (<span id="gotFirstDosePercent">...</span>)
+    <br>
+    Liczba osób które otrzymały drugą dawkę: <span id="gotSecondDose">...</span> (<span id="gotSecondDosePercent">...</span>)
+    <br>
+    Liczba osób które otrzymały pierwszą dawkę i czekają na drugą: <span id="secondDosePending">...</span> (<span id="secondDosePendingPercent">...</span>)
+    <br>
+    Liczba osób niezaszczepionych: <span id="notVaccinated">...</span> (<span id="notVaccinatedPercent">...</span>)
+</p>
+
+<h3> Wykresy</h3>
+
+
+
+<iframe width="566" height="380" seamless frameborder="0" class="md:inline-block rounded-lg" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGZPPpgN1BCzmmjfWV7_u9X_ti_8OCyYUQWN00_suo45dATviqUCVla2FuqwIcEOvqwUnAfP67jrrv/pubchart?oid=1496832224&amp;format=interactive"></iframe>
+<iframe width="305" height="380" seamless frameborder="0" class="md:inline-block rounded-lg" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGZPPpgN1BCzmmjfWV7_u9X_ti_8OCyYUQWN00_suo45dATviqUCVla2FuqwIcEOvqwUnAfP67jrrv/pubchart?oid=1941889059&amp;format=interactive"></iframe>
+<iframe width="566" height="371" seamless frameborder="0" class="md:inline-block rounded-lg mt-1" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGZPPpgN1BCzmmjfWV7_u9X_ti_8OCyYUQWN00_suo45dATviqUCVla2FuqwIcEOvqwUnAfP67jrrv/pubchart?oid=565279625&amp;format=interactive"></iframe>
+
+
+<script>
+    let endpoint = 'https://api.sheety.co/5b0c6b42fecf22f9644aa01bf3ee7261/covid19WPolsce/api';
+fetch(endpoint)
+.then((response) => response.json())
+.then(json => {
+    document.querySelector("#lastUpdate").innerHTML = json.api[0].lastUpdate;
+    document.querySelector("#lastUpdateDate").innerHTML = json.api[0].lastUpdate;
+    document.querySelector("#vaccinatedLast24h").innerHTML = parseFloat(json.api[0].vaccinatedLast24H.toFixed(0)).toLocaleString("pl-PL");
+    document.querySelector("#gotFirstDose").innerHTML = parseFloat(json.api[0].gotFirstDose.toFixed(0)).toLocaleString("pl-PL");
+    document.querySelector("#gotFirstDosePercent").innerHTML = (json.api[0].gotFirstDosePercent * 100).toFixed(2) + "%";
+    document.querySelector("#gotSecondDose").innerHTML = parseFloat(json.api[0].gotSecondDose.toFixed(0)).toLocaleString("pl-PL");
+    document.querySelector("#gotSecondDosePercent").innerHTML = (json.api[0].gotSecondDosePercent * 100).toFixed(2) + "%";
+    document.querySelector("#secondDosePending").innerHTML = parseFloat(json.api[0].secondDosePending.toFixed(0)).toLocaleString("pl-PL");
+    document.querySelector("#secondDosePendingPercent").innerHTML = (json.api[0].secondDosePendingPercent * 100).toFixed(2) + "%";
+    document.querySelector("#notVaccinated").innerHTML = parseFloat(json.api[0].notVaccinated.toFixed(0)).toLocaleString("pl-PL");
+    document.querySelector("#notVaccinatedPercent").innerHTML = (json.api[0].notVaccinatedPercent * 100).toFixed(2) + "%";
+});
+</script>
