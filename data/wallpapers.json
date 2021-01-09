@@ -1,35 +1,40 @@
 {
     "1": {
+        "name": "Wallpaper 8",
+        "filename": "Wallpaper-8",
+        "resolution": "5120x2880"
+    },
+    "2": {
         "name": "Wallpaper 7",
         "filename": "Wallpaper-7",
         "resolution": "5120x2880"
     },
-    "2": {
+    "3": {
         "name": "Wallpaper 6",
         "filename": "Wallpaper-6",
         "resolution": "5120x2880"
     },
-    "3": {
+    "4": {
         "name": "Wallpaper 5",
         "filename": "Wallpaper-5",
         "resolution": "5120x2880"
     },
-    "4": {
+    "5": {
         "name": "Wallpaper 4",
         "filename": "Wallpaper-4",
         "resolution": "5120x2880"
     },
-    "5": {
+    "6": {
         "name": "Wallpaper 3",
         "filename": "Wallpaper-3",
         "resolution": "5120x2880"
     },
-    "6": {
+    "7": {
         "name": "Wallpaper 2",
         "filename": "Wallpaper-2",
         "resolution": "1920x1080"
     },
-    "7": {
+    "8": {
         "name": "Wallpaper 1",
         "filename": "Wallpaper-1",
         "resolution": "1920x1080"
