@@ -14,7 +14,7 @@ alias: ["/szczepienia"]
 
 <h3>Statystyki</h3>
 <p>
-    Liczba zaszczepionych ostatniej doby (<span id="lastUpdateDate">...</span>): <span id="vaccinatedLast24h">...</span>
+    Liczba zaszczepionych ostatniej doby (<span id="last24H">...</span>): <span id="vaccinatedLast24h">...</span>
     <br>
     Liczba osób które otrzymały pierwszą dawkę: <span id="gotFirstDose">...</span> (<span id="gotFirstDosePercent">...</span>)
     <br>
@@ -40,7 +40,7 @@ fetch(endpoint)
 .then((response) => response.json())
 .then(json => {
     document.querySelector("#lastUpdate").innerHTML = json.api[0].lastUpdate;
-    document.querySelector("#lastUpdateDate").innerHTML = json.api[0].lastUpdate;
+    document.querySelector("#last24H").innerHTML = json.api[0].last24H;
     document.querySelector("#vaccinatedLast24h").innerHTML = parseFloat(json.api[0].vaccinatedLast24H.toFixed(0)).toLocaleString("pl-PL");
     document.querySelector("#gotFirstDose").innerHTML = parseFloat(json.api[0].gotFirstDose.toFixed(0)).toLocaleString("pl-PL");
     document.querySelector("#gotFirstDosePercent").innerHTML = (json.api[0].gotFirstDosePercent * 100).toFixed(2) + "%";
