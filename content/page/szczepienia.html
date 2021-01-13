@@ -62,7 +62,7 @@ alias: ["/szczepienia"]
             document.querySelector("#last24H").innerHTML = json.api[0].last24H;
             document.querySelector("#vaccinatedLast24h").innerHTML = parseFloat(json.api[0].vaccinatedLast24H.toFixed(0)).toLocaleString("pl-PL");
             document.querySelector("#dailyAvg").innerHTML = json.api[0].dailyAvg;
-            document.querySelector("#gotFirstDose").innerHTML = parseFloat(json.api[0].gotFirstDose.toFixed(0)).toLocaleString("pl-PL");
+            document.querySelector("#gotFirstDose").innerHTML = parseFloat(json.api[0].gotFirstDose).toLocaleString("pl-PL");
             document.querySelector("#gotFirstDosePercent").innerHTML = (json.api[0].gotFirstDosePercent * 100).toFixed(2) + "%";
             document.querySelector("#gotSecondDose").innerHTML = parseFloat(json.api[0].gotSecondDose.toFixed(0)).toLocaleString("pl-PL");
             document.querySelector("#gotSecondDosePercent").innerHTML = (json.api[0].gotSecondDosePercent * 100).toFixed(2) + "%";
