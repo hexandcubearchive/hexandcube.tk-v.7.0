@@ -30,14 +30,24 @@ alias: ["/szczepienia"]
     <br>
     Liczba osób niezaszczepionych: <span id="notVaccinated">...</span> (<span id="notVaccinatedPercent">...</span>)
     <br>
+    Liczba Niepożądanych Odczynów Poszczepiennych (<a
+        href="https://www.gov.pl/web/szczepimysie/niepozadane-odczyny-poszczepienne">NOP</a>): <span
+        id="numberOfNop">...</span> (<span id="percentOfNop">...</span>)
+    <br>
     W obecnym tempie (średnia z 7d) odporność stadną (70%) uzyskamy za <span id="daysUntilHerdImmunity">...</span> dni
     czyli
     <span id="herdImmunityDate">...</span>
+    <br>
+    Liczba dawek dostarczonych do Polski: <span id="dosesDeliveredToPoland">...</span>
+    <br>
+    Liczba dawek dostarczonych do punktów szczepień: <span id="dosesDeliveredToPoints">...</span> (<span
+        id="dosesDeliveredToPointsPercent">...</span>)
+    <br>
+    Liczba dawek które zostały zutylizowane: <span id="disposedOfDoses">...</span> (<span
+        id="disposedOfDosesPercent">...</span>)
 </p>
 
 <h3> Wykresy</h3>
-
-
 
 <iframe width="566" height="371" seamless frameborder="0" class="md:inline-block rounded-lg" scrolling="no"
     src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGZPPpgN1BCzmmjfWV7_u9X_ti_8OCyYUQWN00_suo45dATviqUCVla2FuqwIcEOvqwUnAfP67jrrv/pubchart?oid=1496832224&amp;format=interactive"></iframe>
@@ -48,7 +58,11 @@ alias: ["/szczepienia"]
     src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGZPPpgN1BCzmmjfWV7_u9X_ti_8OCyYUQWN00_suo45dATviqUCVla2FuqwIcEOvqwUnAfP67jrrv/pubchart?oid=565279625&amp;format=interactive"></iframe>
 <iframe width="566" height="371" seamless frameborder="0" class="inline-block rounded-lg mt-1" scrolling="no"
     src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGZPPpgN1BCzmmjfWV7_u9X_ti_8OCyYUQWN00_suo45dATviqUCVla2FuqwIcEOvqwUnAfP67jrrv/pubchart?oid=925609778&amp;format=interactive"></iframe>
-
+<br>
+<iframe width="566" height="371" seamless frameborder="0" class="inline-block rounded-lg mt-1" scrolling="no"
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGZPPpgN1BCzmmjfWV7_u9X_ti_8OCyYUQWN00_suo45dATviqUCVla2FuqwIcEOvqwUnAfP67jrrv/pubchart?oid=907509682&amp;format=interactive"></iframe>
+<iframe width="566" height="371" seamless frameborder="0" class="inline-block rounded-lg mt-1" scrolling="no"
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGZPPpgN1BCzmmjfWV7_u9X_ti_8OCyYUQWN00_suo45dATviqUCVla2FuqwIcEOvqwUnAfP67jrrv/pubchart?oid=480537438&amp;format=interactive"></iframe>
 <script>
     Date.prototype.addDays = function (days) {
         var date = new Date(this.valueOf());
@@ -74,5 +88,12 @@ alias: ["/szczepienia"]
             document.querySelector("#notVaccinatedPercent").innerHTML = (json.api[0].notVaccinatedPercent * 100).toFixed(2) + "%";
             document.querySelector("#daysUntilHerdImmunity").innerHTML = (json.api[0].daysUntilHerdImmunity).toLocaleString("pl-PL");
             document.querySelector("#herdImmunityDate").innerHTML = (date.addDays(parseFloat(json.api[0].daysUntilHerdImmunity)).toLocaleString("pl-PL")).split(',')[0];
+            document.querySelector("#numberOfNop").innerHTML = (json.api[0].numberOfNop).toLocaleString("pl-PL");
+            document.querySelector("#percentOfNop").innerHTML = (json.api[0].percentOfNop * 100).toFixed(3) + "%";
+            document.querySelector("#dosesDeliveredToPoland").innerHTML = (json.api[0].dosesDeliveredToPoland).toLocaleString("pl-PL");
+            document.querySelector("#dosesDeliveredToPoints").innerHTML = (json.api[0].dosesDeliveredToPoints).toLocaleString("pl-PL");
+            document.querySelector("#dosesDeliveredToPointsPercent").innerHTML = (json.api[0].dosesDeliveredToPointsPercent * 100).toFixed(2) + "%";
+            document.querySelector("#disposedOfDoses").innerHTML = (json.api[0].disposedOfDoses).toLocaleString("pl-PL");
+            document.querySelector("#disposedOfDosesPercent").innerHTML = (json.api[0].disposedOfDosesPercent * 100).toFixed(2) + "%";
         });
 </script>
