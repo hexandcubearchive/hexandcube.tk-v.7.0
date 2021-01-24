@@ -19,15 +19,15 @@ alias: ["/szczepienia"]
     <br>
     Dziennie wykonuje się średnio (ostatnie 7 dni) <span id="dailyAvg">...</span> tys. szczepień
     <br>
-    Liczba osób które otrzymały pierwszą dawkę: <span id="gotFirstDose">...</span> (<span
+    Całkowita liczba wykonanych szczepień: <span id="gotFirstDose">...</span> (<span
         id="gotFirstDosePercent">...</span>)
     <br>
     Liczba osób które otrzymały drugą dawkę: <span id="gotSecondDose">...</span> (<span
         id="gotSecondDosePercent">...</span>)
     <br>
-    Liczba osób które otrzymały pierwszą dawkę i czekają na drugą: <span id="secondDosePending">...</span> (<span
+    <!-- Liczba osób które otrzymały pierwszą dawkę i czekają na drugą: <span id="secondDosePending">...</span> (<span
         id="secondDosePendingPercent">...</span>)
-    <br>
+    <br> -->
     Liczba osób niezaszczepionych: <span id="notVaccinated">...</span> (<span id="notVaccinatedPercent">...</span>)
     <br>
     Liczba Niepożądanych Odczynów Poszczepiennych (<a
@@ -82,8 +82,8 @@ alias: ["/szczepienia"]
             document.querySelector("#gotFirstDosePercent").innerHTML = (json.api[0].gotFirstDosePercent * 100).toFixed(2) + "%";
             document.querySelector("#gotSecondDose").innerHTML = parseFloat(json.api[0].gotSecondDose.toFixed(0)).toLocaleString("pl-PL");
             document.querySelector("#gotSecondDosePercent").innerHTML = (json.api[0].gotSecondDosePercent * 100).toFixed(2) + "%";
-            document.querySelector("#secondDosePending").innerHTML = parseFloat(json.api[0].secondDosePending.toFixed(0)).toLocaleString("pl-PL");
-            document.querySelector("#secondDosePendingPercent").innerHTML = (json.api[0].secondDosePendingPercent * 100).toFixed(2) + "%";
+            // document.querySelector("#secondDosePending").innerHTML = parseFloat(json.api[0].secondDosePending.toFixed(0)).toLocaleString("pl-PL");
+            // document.querySelector("#secondDosePendingPercent").innerHTML = (json.api[0].secondDosePendingPercent * 100).toFixed(2) + "%";
             document.querySelector("#notVaccinated").innerHTML = parseFloat(json.api[0].notVaccinated.toFixed(0)).toLocaleString("pl-PL");
             document.querySelector("#notVaccinatedPercent").innerHTML = (json.api[0].notVaccinatedPercent * 100).toFixed(2) + "%";
             document.querySelector("#daysUntilHerdImmunity").innerHTML = (json.api[0].daysUntilHerdImmunity).toLocaleString("pl-PL");
