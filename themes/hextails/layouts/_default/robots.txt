@@ -2,8 +2,8 @@ User-agent: *
 Disallow: /page
 Disallow: /404
 Disallow: /assets
-Disallow: /cookiepolicy
-Disallow: /cookies
 Disallow: /media
 
 Allow: /page/szczepienia
+Allow: /page/privacy
+Allow: /page/terms
