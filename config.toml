@@ -16,7 +16,7 @@ summaryLength = 70
 
 [params]
 
-    margins = "2xl:mx-72 xl:mx-28 lg:mx-10 md:mx-4" # Uses TailwindCSS Utility Classes
+    margins = "2xl:mx-60 xl:mx-28 lg:mx-10 md:mx-4" # Uses TailwindCSS Utility Classes 
 
     [params.meta]
         name = "hexandcube.tk"
