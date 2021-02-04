@@ -5,7 +5,7 @@
     {{- partial "head.html" . -}}
 </head>
 
-<body class="bg-warmGray-50 dark:bg-gray-900 transition-all-300 {{ if .Site.IsServer }}debug-screens{{ end }}">
+<body class="bg-white dark:bg-gray-900 transition-all-300 {{ if .Site.IsServer }}debug-screens{{ end }}">
         {{- partial "header.html" . -}}
         <div id="content">
             {{- block "main" . }}{{- end }}

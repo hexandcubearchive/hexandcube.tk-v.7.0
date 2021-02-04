@@ -1,8 +1,8 @@
-# Hexandcube.tk Version 7.0 (codename hextails)
-baseURL = "https://hexandcube.tk/"
+# Hexandcube.tk Version 7.1 dev
+baseURL = "https://dev.hexandcube.tk/"
 languageCode = "en-us"
 theme = "hextails"
-title = "Hexandcube"
+title = "Hexandcube (dev)"
 paginate = 5
 enableGitInfo = false
 enableEmoji = true

@@ -2,6 +2,7 @@
 Title: Home
 ---
 
+<div class="absolute top-0 left-0 bg-gray-100 dark:bg-gray-800 h-200 w-full -z-100 hero"></div>
 <div class="my-24 col-span-2 text-center sm:w-1/2 w-6/8 mx-auto">
     <img src="https://storage.hexandcube.tk/images/logo.png" alt="Avatar"
         class="rounded-full w-32 h-32 mb-4 inline-block">
@@ -16,6 +17,12 @@ Title: Home
         <a href="/download" class="button bg-gray-700 hover:bg-gray-500">Download files</a>
     </div>
 </div>
+{{<alert color="green" icon="fas fa-flask">}}
+You're currently browsing an experimental version of <a class="text-green-800" href="https://hexandcube.tk">hexandcube.tk</a>
+<br>
+<span class="font-light">This version is very unstable, and may be outdated. Proceed with caution.</span>
+<br>
+{{</alert>}}
 
 <section class="text-gray-600 body-font">
     <div class="container mx-auto flex px-20 py-24 md:flex-row flex-col items-center">
@@ -44,3 +51,17 @@ Title: Home
         </p>
     {{</alert>}}
 </noscript>
+    
+</div>
+
+<style>
+
+    .hero {
+        clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - 10vw),
+        0 100%
+        );
+    }
+</style>

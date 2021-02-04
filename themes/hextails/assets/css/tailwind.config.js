@@ -1,18 +1,18 @@
-const colors = require('tailwindcss/colors');
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-    purge: {
-      mode: "all",
-      enabled: true,
-      content: [
-          './**/*.html',
-          './**/*.md'
-      ]
+  purge: {
+    mode: "all",
+    enabled: true,
+    content: ["./**/*.html", "./**/*.md"],
   },
-  darkMode: 'class',
+  darkMode: "class",
   purge: [],
   theme: {
     extend: {
+      zIndex: {
+        "-100": "-100",
+      },
       colors: {
         warmGray: colors.warmGray,
         gray: colors.coolGray,
@@ -32,25 +32,27 @@ module.exports = {
         purple: colors.purple,
         fuchia: colors.fuchia,
         pink: colors.pink,
-        rose: colors.rose
+        rose: colors.rose,
       },
       animation: {
-        'spin-slow': 'spin 4s linear infinite'
+        "spin-slow": "spin 4s linear infinite",
       },
       spacing: {
-        '1px': '1px',
-        '72': '18rem',
-        '84': '21rem',
-        '96': '24rem',
-      }
+        "1px": "1px",
+        72: "18rem",
+        84: "21rem",
+        96: "24rem",
+        128: "32rem",
+        144: "36rem",
+        184: "46rem",
+        200: "50rem",
+      },
     },
     fontFamily: {
       sans: "Inter",
-      mono: "Courier Prime"
-    }
+      mono: "Courier Prime",
+    },
   },
   variants: {},
-  plugins: [
-    require('tailwindcss-debug-screens')
-  ],
-}
+  plugins: [require("tailwindcss-debug-screens")],
+};
