@@ -8,6 +8,8 @@ alias: ["/szczepienia"]
         <br>
         <b>Aktualizacja danych o szczepieniach:</b> <span id="lastVaccUpdate">...</span>
         <br>
+        <b>Aktualizacja danych szczegółowych NOP:</b> <span id="lastNopUpdate">...</span>
+        <br>
         <b>Źródła Danych:</b> Ministerstwo Zdrowia, Główny Urząd Statystyczny, Agencja Rezerw Materiałowych<br><br>
         Na podstawie akrusza <a href="https://bit.ly/SzczepieniaCOVID19" target="_blank">Szczepienia przeciwko COVID-19
             w Polsce</a>
@@ -193,7 +195,7 @@ alias: ["/szczepienia"]
         .then(response => {
             document.querySelector("#vaccinatedLast24h").innerHTML = response.data[0].vaccinatedLast24h;
             document.querySelector("#lastVaccUpdate").innerHTML = response.data[0].lastVaccUpdate;
-            // document.querySelector("#lastNopUpdate").innerHTML = response.data[0].lastNopUpdate;
+            document.querySelector("#lastNopUpdate").innerHTML = response.data[0].lastNopUpdate;
             document.querySelector("#allVaccinations").innerHTML = response.data[0].allVaccinations;
             document.querySelector("#allVaccinated").innerHTML = response.data[0].allVaccinated;
             document.querySelector("#allVaccinatedPercent").innerHTML = response.data[0].allVaccinatedPercent;
